@@ -1,0 +1,30 @@
+import {z} from "zod";
+
+export const ProductSchema= z.object({
+    itemCode: z.string().min(1, {message: "Item code is required"}),
+    itemName: z.string().min(1, {message: "Item name is required"}),
+    itemType: z.string().min(1, {message: "Item type is required"}),
+    quality: z.string().min(1, {message: "Quality is required"}),
+    itemNameInvoice: z.string().min(1, {message: "Item Name Invoice required"}),
+    hsnCode: z.string().min(1, {message: "HSN Code is required"}),
+    brand: z.string().min(1, {message: "Brand is required"}),
+    gst: z.string().min(1, {message: "GST is required"}),
+    itemLocalName: z.string().min(1, {message: "Item Local Name is required"}),
+    sellingPrice: z.number().min(0, {message: "Selling Price is required"}),
+    countryOrigin: z.string().min(1, {message: "Country of Origin is required"}),
+    adCode: z.string().min(1, {message: "AD Code is required"}),
+    invoice1Rate: z.number().min(0, {message: "Invoice 1 Rate is required"}),
+    customDuty: z.string().min(1, {message: "Custom Duty is required"}),
+    customDutyType: z.string().min(1, {message: "Custom Duty Type is required"}),
+    socialWelfare: z.string().min(1, {message: "Social Welfare is required"}),
+    port: z.string().min(1, {message: "Port is required"}),
+    balanceOQ: z.number().min(0, {message: "Opening Quantity required"}),
+    invoice1OQ: z.number().min(0, {message: "Invoice 1 Opening Quantity is required"}),
+    invoice2OQ: z.number().min(0, {message: "Invoice 2 Opening Quantity is required"}),
+    fixedExpenses: z.number().min(0, {message: "Fixed Expenses is required"}),
+    kiran: z.string().min(1, {message: "Kiran is required"}),
+    discount: z.number().min(0, {message: "Discount is required"}),
+    brokerage: z.number().min(0, {message: "Brokerage is required"}),
+    casDiscount: z.number().min(0, {message: "CAS Discount is required"}),
+    bardanaWeight: z.number().min(0, {message: "Bardana Weight is required"})
+})
